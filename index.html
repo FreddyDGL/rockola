@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROCKOLA</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+
+<body>
+
+    <h1 >ROCKOLA</h1>
+    <button class="cancion" id="linkin">Given't UP - Linkin Park</button>
+    <button class="cancion" id="queen">The Show Must Gon On - Queen</button>
+    <button class="cancion" id="zona">Y Mi Corazon Contento - Zona Ganjah</button>
+    <button class="cancion" id="jamiro">Virtual Inasity - Jamiroquai</button>
+    <button class="rockola" id="moneda">Insert Coin</button>
+    <button class="detener" id="detener">Detener</button>
+
+    <img src="images/neutro.jpeg" id="imagen" alt="neutral">
+    <audio controls autoplay src="" id="audio"></audio>
+</body>
+<script>
+
+    btnLinkin = document.getElementById('linkin');
+    btnQueen = document.getElementById('queen');
+    btnZona = document.getElementById('zona');
+    btnJamiro = document.getElementById('jamiro');
+    btnMoneda = document.getElementById('moneda');
+    ocultar();
+    btnDetener = document.getElementById('detener');
+
+    function ocultar() {
+        btnMoneda.style.display = "none";
+    }
+    //funciones para mandar a llamar imagenes y cambiar audio 
+    btnLinkin.addEventListener('click', function () {
+        logoLinkin();
+        trackLinkin();
+    });
+    btnQueen.addEventListener('click', function () {
+        logoQueen();
+        trackQueen();
+    });
+    btnZona.addEventListener('click', function () {
+        logoZona();
+        trackZona();
+    });
+    btnJamiro.addEventListener('click', function () {
+        logoJamiro();
+        trackJamiro();
+    });
+    btnMoneda.addEventListener('click', function () {
+        imgNeutral();
+    });
+
+    //funcion para detener 
+    btnDetener.addEventListener('click', function () {
+        detener();
+        imgNeutral();
+    });
+    function detener() {
+        document.getElementById('audio').src = "";
+    }
+
+    //funciones para cambiar de cancion
+    function trackLinkin() {
+        document.getElementById('audio').src = "audio/Given_Up.mp3";
+    }
+    function trackQueen() {
+        document.getElementById('audio').src = "audio/The_show_must_go_on.mp3";
+    }
+    function trackZona() {
+        document.getElementById('audio').src = "audio/Y_mi_corazon_contento.mp3";
+    }
+    function trackJamiro() {
+        document.getElementById('audio').src = "audio/Virtual_Insanity.mp3";
+    }
+
+    //funciones para cambiar imagenes 
+    function logoLinkin() {
+        document.getElementById('imagen').src = "images/linkin.jpg";
+    }
+    function logoQueen() {
+        document.getElementById('imagen').src = "images/queen.png";
+    }
+    function logoZona() {
+        document.getElementById('imagen').src = "images/zona.jpg";
+    }
+    function logoJamiro() {
+        document.getElementById('imagen').src = "images/jamiroquai.jpg";
+    }
+    //hacer imagen inicial 
+    function imgNeutral() {
+        document.getElementById('imagen').src = "images/neutro.jpeg";
+    }
+
+</script>
+
+</html>

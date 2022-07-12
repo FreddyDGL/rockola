@@ -1,0 +1,30 @@
+body    {
+    background-color: black;
+}
+h1 {
+    color:#FFFFFF;
+    position: absolute;
+    top: 50px;
+    left: 500px;
+}
+.cancion{
+    border-radius: 5px;
+    background-color: gray;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.detener{
+    border-radius: 5px;
+    background-color: gray;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#imagen{
+    position:relative; 
+    top: 0px;
+    left: 0px;
+    height: 650px;
+    width: 1330px;
+    z-index: -1;
+}
